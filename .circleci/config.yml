@@ -7,32 +7,32 @@ jobs:
       - run:
           name: stable/alpine
           command: |
-          cd stable/alpine
-          docker build -t "nginx:stable" .
+            cd stable/alpine
+            docker build -t "nginx:stable" .
   build-stable-alpine-perl:
     steps:
       - checkout
       - run:
           name: stable/alpine-perl
           command: |
-          cd stable/alpine-perl
-          docker build -t "nginx:stable" .
+            cd stable/alpine-perl
+            docker build -t "nginx:stable" .
   build-mainline-alpine:
     steps:
       - checkout
       - run:
           name: mainline/alpine
           command: |
-          cd mainline/alpine
-          docker build -t "nginx:mainline" .
+            cd mainline/alpine
+            docker build -t "nginx:mainline" .
   build-mainline-alpine-perl:
     steps:
       - checkout
       - run:
           name: mainline/alpine-perl
           command: |
-          cd mainline/alpine-perl
-          docker build -t "nginx:mainline" .
+            cd mainline/alpine-perl
+            docker build -t "nginx:mainline" .
 
 workflows:
   version: 2
