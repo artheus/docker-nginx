@@ -8,7 +8,7 @@ jobs:
           name: stable/alpine
           command: |
           cd stable/alpine
-          docker build -t nginx:stable .
+          docker build -t "nginx:stable" .
   build-stable-alpine-perl:
     steps:
       - checkout
@@ -16,7 +16,7 @@ jobs:
           name: stable/alpine-perl
           command: |
           cd stable/alpine-perl
-          docker build -t nginx:stable .
+          docker build -t "nginx:stable" .
   build-mainline-alpine:
     steps:
       - checkout
@@ -24,7 +24,7 @@ jobs:
           name: mainline/alpine
           command: |
           cd mainline/alpine
-          docker build -t nginx:mainline .
+          docker build -t "nginx:mainline" .
   build-mainline-alpine-perl:
     steps:
       - checkout
@@ -32,7 +32,7 @@ jobs:
           name: mainline/alpine-perl
           command: |
           cd mainline/alpine-perl
-          docker build -t nginx:mainline .
+          docker build -t "nginx:mainline" .
 
 workflows:
   version: 2
