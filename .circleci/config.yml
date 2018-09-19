@@ -1,0 +1,45 @@
+---
+version: 2
+jobs:
+  build-stable-alpine:
+    steps:
+      - checkout
+      - run:
+          name: stable/alpine
+          command: |
+          cd stable/alpine
+          docker build -t nginx:stable .
+  build-stable-alpine-perl:
+    steps:
+      - checkout
+      - run:
+          name: stable/alpine-perl
+          command: |
+          cd stable/alpine-perl
+          docker build -t nginx:stable .
+  build-mainline-alpine:
+    steps:
+      - checkout
+      - run:
+          name: mainline/alpine
+          command: |
+          cd mainline/alpine
+          docker build -t nginx:mainline .
+  build-mainline-alpine-perl:
+    steps:
+      - checkout
+      - run:
+          name: mainline/alpine-perl
+          command: |
+          cd mainline/alpine-perl
+          docker build -t nginx:mainline .
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build-stable-alpine
+      - build-stable-alpine-perl
+      - build-mainline-alpine
+      - build-mainline-alpine-perl
+...
