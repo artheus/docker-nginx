@@ -2,6 +2,7 @@
 version: 2
 jobs:
   build-stable-alpine:
+    machine: true
     steps:
       - checkout
       - run:
@@ -10,6 +11,7 @@ jobs:
             cd stable/alpine
             docker build -t "nginx:stable" .
   build-stable-alpine-perl:
+    machine: true
     steps:
       - checkout
       - run:
@@ -18,6 +20,7 @@ jobs:
             cd stable/alpine-perl
             docker build -t "nginx:stable" .
   build-mainline-alpine:
+    machine: true
     steps:
       - checkout
       - run:
@@ -26,6 +29,7 @@ jobs:
             cd mainline/alpine
             docker build -t "nginx:mainline" .
   build-mainline-alpine-perl:
+    machine: true
     steps:
       - checkout
       - run:
